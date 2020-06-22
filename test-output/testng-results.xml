@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="33816" started-at="2020-06-22T21:14:04 BST" finished-at="2020-06-22T21:14:37 BST">
+  <suite name="Suite" duration-ms="33370" started-at="2020-06-23T00:14:09 BST" finished-at="2020-06-23T00:14:42 BST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="33816" started-at="2020-06-22T21:14:04 BST" finished-at="2020-06-22T21:14:37 BST">
-      <class name="mobile.AppiumFramework.EcommerceTest">
-        <test-method status="PASS" signature="validateTotal()[pri:0, instance:mobile.AppiumFramework.EcommerceTest@59906517]" name="validateTotal" duration-ms="33757" started-at="2020-06-22T21:14:04 BST" finished-at="2020-06-22T21:14:37 BST">
+    <test name="Test" duration-ms="33370" started-at="2020-06-23T00:14:09 BST" finished-at="2020-06-23T00:14:42 BST">
+      <class name="mobile.AppiumFramework.tests.EcommerceTest">
+        <test-method status="PASS" signature="validateTotal()[pri:0, instance:mobile.AppiumFramework.tests.EcommerceTest@59906517]" name="validateTotal" duration-ms="33314" started-at="2020-06-23T00:14:09 BST" finished-at="2020-06-23T00:14:42 BST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateTotal -->
-      </class> <!-- mobile.AppiumFramework.EcommerceTest -->
+      </class> <!-- mobile.AppiumFramework.tests.EcommerceTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

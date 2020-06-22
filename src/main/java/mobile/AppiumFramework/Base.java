@@ -12,7 +12,9 @@ import io.appium.java_client.remote.MobileCapabilityType;
 public class Base {
 
 	public static AndroidDriver<AndroidElement> capabilities() throws MalformedURLException {
-
+		
+		// Todo - Add Properties for generics app location and device details
+		
 		DesiredCapabilities caps = new DesiredCapabilities();
 		
 		caps.setCapability(MobileCapabilityType.PLATFORM_NAME, "ANDROID");

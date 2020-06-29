@@ -42,7 +42,7 @@ public class Base {
 		caps.setCapability(MobileCapabilityType.PLATFORM_NAME, "ANDROID");
 		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "9");
 		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Mi A1");
-		caps.setCapability(MobileCapabilityType.UDID, "35c00a1e9805");
+		caps.setCapability(MobileCapabilityType.UDID, "35c00axxxxxx"); // 12 chars
 		caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 60);
 		//caps.setCapability(MobileCapabilityType.BROWSER_NAME,"Chrome");
 		

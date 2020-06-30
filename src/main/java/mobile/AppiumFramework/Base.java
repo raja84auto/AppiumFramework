@@ -25,7 +25,7 @@ public class Base {
 		String getApp = (String) props.get(appName);
 		String getDevice = (String) props.getProperty("device");
 		
-		File appDir = new File("Apk");
+		File appDir = new File("apk");
 		File apkFile = new File(appDir, getApp);
 		
 		DesiredCapabilities caps = new DesiredCapabilities();		

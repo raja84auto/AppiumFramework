@@ -20,8 +20,7 @@ Eclipse > Project, AppiumFramework > Run > TestngSuite
 4. Verify test report: (Video Recording)
 goto, Project root > goto folder, 'automationrecordings' > download, ECommerceMobileApp - Test.avi file > view it by VLC media player
 
-5. Test report: Testng report
-goto Project root > test-output > click on html file, 'emailable-report.html'
+5. Test report: https://htmlpreview.github.io/?https://github.com/raja84auto/AppiumFramework/blob/master/test-output/emailable-report.html
 
 6. Done - Test framework features and setup:
 Test class with test cases > Generic BaseClass for DesiredCapabilities set up with Mobile Devices > 

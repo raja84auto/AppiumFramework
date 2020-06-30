@@ -2,11 +2,11 @@
 
 This testing framework is for test the mobile application in various mobile devices (Android, IOS), IOS Simulators, Android Emulators, mobile browsers.
 
-Tools used: 
+Mobile Test Framework technologies: 
 Java 1.8, Appium, NodeModules, Maven, TestNG, NativeApp, Mobile devices, Mobile browsers.
 
 Mobile app test tools:
-Android > AndroidStudio > UIAutomator2 > Android Emulator > Android real devices
+Android > AndroidStudio > UIAutomator2 > Android Emulator > Android real devices. 
 IOS > XCode > Appium Inspector > IOS Simultor > IOS real devices (iphone 6 and IPad) 
 Appium Desktop
 

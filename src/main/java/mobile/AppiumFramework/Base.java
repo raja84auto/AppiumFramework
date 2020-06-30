@@ -23,7 +23,7 @@ public class Base {
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\Properties\\global.properties");
 		props.load(fis);
 		String getApp = (String) props.get(appName);
-		String getDevice = (String) props.getProperty("device");
+		String getDevice = (String) props.getProperty("androidEmulator");
 		
 		File appDir = new File("apk");
 		File apkFile = new File(appDir, getApp);

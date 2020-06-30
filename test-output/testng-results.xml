@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="74121" started-at="2020-06-30T21:39:50 BST" finished-at="2020-06-30T21:41:04 BST">
+  <suite name="Suite" duration-ms="43837" started-at="2020-06-30T23:09:18 BST" finished-at="2020-06-30T23:10:02 BST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="74121" started-at="2020-06-30T21:39:50 BST" finished-at="2020-06-30T21:41:04 BST">
+    <test name="Test" duration-ms="43837" started-at="2020-06-30T23:09:18 BST" finished-at="2020-06-30T23:10:02 BST">
       <class name="mobile.AppiumFramework.tests.EcommerceTest">
-        <test-method status="PASS" signature="validateTotal()[pri:0, instance:mobile.AppiumFramework.tests.EcommerceTest@25af5db5]" name="validateTotal" duration-ms="74065" started-at="2020-06-30T21:39:50 BST" finished-at="2020-06-30T21:41:04 BST">
+        <test-method status="PASS" signature="validateTotal()[pri:0, instance:mobile.AppiumFramework.tests.EcommerceTest@12cdcf4]" name="validateTotal" duration-ms="43777" started-at="2020-06-30T23:09:18 BST" finished-at="2020-06-30T23:10:02 BST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateTotal -->

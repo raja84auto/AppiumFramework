@@ -24,7 +24,7 @@ public class EcommerceTest extends Base{
 	@Test
 	public void validateTotal() throws Exception {
 		
-		videoRecorder.startRecord("ECommerceMobileApp - Test - Video");
+		videoRecorder.startRecord("Android App - Test - Android Emulator");
 
 		AndroidDriver<AndroidElement> driver=capabilities("GeneralStoreApp");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

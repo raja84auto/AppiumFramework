@@ -24,7 +24,8 @@ public class Base {
 	public static AndroidDriver<AndroidElement> capabilities(String appName) throws IOException {		
 		
 		Properties props = new Properties();
-		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\Properties\\global.properties");
+		// /Users/rajamac/eclipse-workspace/AppiumFramework/src/main/java/Properties/global.properties
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"/src/main/java/Properties/global.properties");
 		props.load(fis);
 		String getApp = (String) props.get(appName);
 		String getDevice = (String) props.getProperty("androidEmulator");
@@ -65,7 +66,7 @@ public class Base {
 	public static IOSDriver<IOSElement>  capabilities() throws MalformedURLException {
 		
 		DesiredCapabilities caps = new DesiredCapabilities();
-		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 7");
+		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 8");
 		caps.setCapability(MobileCapabilityType.PLATFORM_NAME, "IOS");
 		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "12.1");
 		// ios and iphone version 10.2+

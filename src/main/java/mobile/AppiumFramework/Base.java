@@ -12,13 +12,17 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 public class Base {
 
-	public static AndroidDriver<AndroidElement> capabilities(String appName) throws IOException {
+	public static AndroidDriver<AndroidElement> driver = null;
+	public static IOSDriver<IOSElement> iosDriver = null;
+	
+	public static AndroidDriver<AndroidElement> capabilities(String appName) throws IOException {		
 		
-		AndroidDriver<AndroidElement> driver = null;
 		Properties props = new Properties();
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\Properties\\global.properties");
 		props.load(fis);
@@ -36,23 +40,47 @@ public class Base {
 		caps.setCapability(MobileCapabilityType.APP, apkFile.getAbsolutePath());
 		driver = new AndroidDriver<>(new URL("http://0.0.0.0:4723/wd/hub"), caps);		
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+					
 		
-		
-		/*
+		/* 
+		 * Android - Real device
+		 * 		
+		 * 
 		caps.setCapability(MobileCapabilityType.PLATFORM_NAME, "ANDROID");
 		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "9");
 		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Mi A1");
 		caps.setCapability(MobileCapabilityType.UDID, "35c00axxxxxx"); // 12 chars
 		caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 60);
 		//caps.setCapability(MobileCapabilityType.BROWSER_NAME,"Chrome");
-		
-		
 			
 		URL url = new URL("http://0.0.0.0:4723/wd/hub");			
 		AndroidDriver<AndroidElement> driver = new AndroidDriver<>(url, caps);
-		*/
+		*/	
 		
 		return driver;
 	}
+	
+	
+	// Todo
+	public static IOSDriver<IOSElement>  capabilities() throws MalformedURLException {
+		
+		DesiredCapabilities caps = new DesiredCapabilities();
+		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 7");
+		caps.setCapability(MobileCapabilityType.PLATFORM_NAME, "IOS");
+		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "12.1");
+		// ios and iphone version 10.2+
+		caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest"); // 
+		caps.setCapability(MobileCapabilityType.APP, "//Users//rajamac//Desktop//UICatalog.app");  
+		
+		URL url = new URL("http://0.0.0.0:4723/wd/hub");
+		iosDriver = new IOSDriver<IOSElement>(url, caps);
+		iosDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS );
+		
+		return iosDriver;		
+
+
+	} 
+
+	
 
 }

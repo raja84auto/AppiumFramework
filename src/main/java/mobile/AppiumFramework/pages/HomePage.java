@@ -38,7 +38,7 @@ public class HomePage {
 	
 	
 	public void fillHomePage() {
-		yourName.sendKeys("Automtion");
+		yourName.sendKeys("AIB Automation Team");
 		genderFemale.click();
 		dropdownCountry.click();
 		utilLibs = new UtilLibs(driver);

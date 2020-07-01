@@ -3,8 +3,8 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="mobile.AppiumFramework.tests.EcommerceTest"/> 
-      <class name="mobile.AppiumFramework.tests.IosAppTest"/> 
+      <class name="mobile.AppiumFramework.tests.AndroidAppTest"/>
+      <class name="mobile.AppiumFramework.tests.IosAppTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

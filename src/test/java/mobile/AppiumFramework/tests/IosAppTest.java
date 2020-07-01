@@ -1,5 +1,6 @@
 package mobile.AppiumFramework.tests;
 
+import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 
 import org.openqa.selenium.Dimension;
@@ -27,7 +28,7 @@ public class IosAppTest extends Base {
 		IOSDriver<IOSElement> driver = capabilities();
 		driver.findElementByAccessibilityId("Alert Views").click();
 		driver.findElementByXPath("//*[@value='Text Entry']").click();
-		driver.findElementByClassName("XCUIElementTextField").sendKeys("AutoTest");
+		driver.findElementByClassName("XCUIElementTextField").sendKeys("Welcome to Automation Test :) ");
 		driver.findElementByName("OK").click();
 		Thread.sleep(5000);
 		

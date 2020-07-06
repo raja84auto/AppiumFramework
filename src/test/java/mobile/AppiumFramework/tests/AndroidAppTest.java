@@ -1,5 +1,6 @@
 package mobile.AppiumFramework.tests;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
 import org.testng.annotations.Test;
 import io.appium.java_client.android.AndroidDriver;

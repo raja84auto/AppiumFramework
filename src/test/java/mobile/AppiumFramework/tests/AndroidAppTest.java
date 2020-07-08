@@ -26,6 +26,8 @@ public class AndroidAppTest extends Base{
 	@Test
 	public void validateTotal() throws Exception {
 		
+		service = startAppiumServer();
+		
 		videoRecorder.startRecord("Android App - Test - Android Emulator");
 
 		AndroidDriver<AndroidElement> driver=capabilities("GeneralStoreApp");
@@ -49,6 +51,7 @@ public class AndroidAppTest extends Base{
 		Thread.sleep(5000);
 		
 		videoRecorder.stopRecord();
+		service.stop(); 
 	}
 
 	

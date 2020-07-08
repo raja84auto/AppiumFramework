@@ -19,7 +19,7 @@
   <!--  mvn test -Pid  -->
   <profiles>
   	<profile>
-  		<id>Smoke</id>
+  		<id>SmokeSuite</id>
   		<build>
 		    <pluginManagement>
 		      <plugins>
@@ -39,7 +39,7 @@
   	</profile>
   	
   	<profile>
-  		<id>Regression</id>
+  		<id>RegressionSuite</id>
   		<build>
 		    <pluginManagement>
 		      <plugins>
@@ -63,31 +63,65 @@
   <dependencies>
     <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 	<dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>7.1.0</version>
-    <scope>test</scope>
+	    <groupId>org.testng</groupId>
+	    <artifactId>testng</artifactId>
+	    <version>7.1.0</version>
+	    <scope>test</scope>
 	</dependency>
 
     <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
 	<dependency>
-    <groupId>io.appium</groupId>
-    <artifactId>java-client</artifactId>
-    <!--   <version>7.0.0</version> -->
-    <version>7.3.0</version>  
+	    <groupId>io.appium</groupId>
+	    <artifactId>java-client</artifactId>
+	    <!--   <version>7.0.0</version> -->
+	    <version>7.3.0</version>  
 	</dependency>
 	<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 	<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-java</artifactId>
-    <version>3.141.59</version>
+	    <groupId>org.seleniumhq.selenium</groupId>
+	    <artifactId>selenium-java</artifactId>
+	    <version>3.141.59</version>
 	</dependency>	
 	<!-- https://mvnrepository.com/artifact/org.monte/monte-screen-recorder -->
 	<dependency>
-    <groupId>com.github.stephenc.monte</groupId>
-    <artifactId>monte-screen-recorder</artifactId>
-    <version>0.7.7.0</version>
+	    <groupId>com.github.stephenc.monte</groupId>
+	    <artifactId>monte-screen-recorder</artifactId>
+	    <version>0.7.7.0</version>
 	</dependency>
+	
+	   
+	<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+	 <dependency>
+	    <groupId>org.slf4j</groupId>
+	    <artifactId>slf4j-simple</artifactId>
+	    <version>1.7.30</version>
+	    <scope>test</scope>
+	</dependency> 
+	<!-- https://mvnrepository.com/artifact/com.guicedee.services/sl4j -->
+	<!-- <dependency>
+	    <groupId>com.guicedee.services</groupId>
+	    <artifactId>sl4j</artifactId>
+	    <version>1.0.13.1</version>
+	</dependency>  -->
+	<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+	<dependency>
+	    <groupId>org.apache.commons</groupId>
+	    <artifactId>commons-lang3</artifactId>
+	    <version>3.10</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+	<dependency>
+	    <groupId>commons-io</groupId>
+	    <artifactId>commons-io</artifactId>
+	    <version>2.7</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/commons-validator/commons-validator -->
+	<dependency>
+	    <groupId>commons-validator</groupId>
+	    <artifactId>commons-validator</artifactId>
+	    <version>1.6</version>
+	</dependency>
+	
 	
   </dependencies>
 </project>

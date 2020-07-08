@@ -2,22 +2,22 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-07-06T23:55:33 BST" name="RegressionSuite" finished-at="2020-07-06T23:56:40 BST" duration-ms="67222">
+  <suite started-at="2020-07-08T14:01:38 BST" name="SmokeSuite" finished-at="2020-07-08T14:02:21 BST" duration-ms="43070">
     <groups>
     </groups>
-    <test started-at="2020-07-06T23:55:33 BST" name="RegressionTest" finished-at="2020-07-06T23:56:40 BST" duration-ms="67222">
+    <test started-at="2020-07-08T14:01:38 BST" name="SmokeTest" finished-at="2020-07-08T14:02:21 BST" duration-ms="43070">
       <class name="mobile.AppiumFramework.tests.IosAppTest">
-        <test-method signature="uiCatalogTestl()[pri:0, instance:mobile.AppiumFramework.tests.IosAppTest@29d89d5d]" started-at="2020-07-06T23:56:12 BST" name="uiCatalogTestl" finished-at="2020-07-06T23:56:40 BST" duration-ms="28480" status="PASS">
+        <test-method signature="uiCatalogTestl()[pri:0, instance:mobile.AppiumFramework.tests.IosAppTest@6c130c45]" started-at="2020-07-08T14:01:38 BST" name="uiCatalogTestl" finished-at="2020-07-08T14:02:06 BST" duration-ms="28080" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- uiCatalogTestl -->
       </class> <!-- mobile.AppiumFramework.tests.IosAppTest -->
       <class name="mobile.AppiumFramework.tests.AndroidAppTest">
-        <test-method signature="validateTotal()[pri:0, instance:mobile.AppiumFramework.tests.AndroidAppTest@2fd1433e]" started-at="2020-07-06T23:55:33 BST" name="validateTotal" finished-at="2020-07-06T23:56:12 BST" duration-ms="38697" status="PASS">
+        <test-method signature="validateTotal()[pri:0, instance:mobile.AppiumFramework.tests.AndroidAppTest@6a84a97d]" started-at="2020-07-08T14:01:38 BST" name="validateTotal" finished-at="2020-07-08T14:02:21 BST" duration-ms="43020" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateTotal -->
       </class> <!-- mobile.AppiumFramework.tests.AndroidAppTest -->
-    </test> <!-- RegressionTest -->
-  </suite> <!-- RegressionSuite -->
+    </test> <!-- SmokeTest -->
+  </suite> <!-- SmokeSuite -->
 </testng-results>

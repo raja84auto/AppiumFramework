@@ -25,11 +25,8 @@ public class IosAppTest extends Base {
 	VideoRecorderUtils videoRecorder = null;
 	
 	@BeforeTest
-	public void KillAllNodes() throws IOException, InterruptedException {
-		// Runtime.getRuntime().exec("taskkill /F /IM node.exe"); // Windows
-		// Runtime.getRuntime().exec("fkill -f :4723");
-		Runtime.getRuntime().exec("sudo kill -2 $(sudo lsof -t -i:4723"); // Mac
-		Thread.sleep(4000);
+	public void KillNodes() throws IOException, InterruptedException {
+		KillAllNodes();
 	}
 	
 	

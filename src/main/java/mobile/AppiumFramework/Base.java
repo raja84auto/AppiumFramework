@@ -9,6 +9,9 @@ import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.appium.java_client.android.AndroidDriver;
@@ -72,6 +75,14 @@ public class Base {
 		Runtime.getRuntime().exec(System.getProperty("user.dir")+"/src/main/java/resources/startEmulator.command");
 		Thread.sleep(6000);
 		System.out.println("Andoid Emulator has been started");
+	}
+	
+
+	public void KillAllNodes() throws IOException, InterruptedException {
+		// Runtime.getRuntime().exec("taskkill /F /IM node.exe"); // Windows
+		// Runtime.getRuntime().exec("fkill -f :4723");
+		Runtime.getRuntime().exec("sudo kill -2 $(sudo lsof -t -i:4723"); // Mac
+		Thread.sleep(4000);
 	}
 	
 	
@@ -143,5 +154,11 @@ public class Base {
 	} 
 
 	
+	public static void getScreenShot(String testName) throws IOException {
+		File screenFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(screenFile, new File("./failedTestScreens/defect_"+testName+".png"));
+		// FileUtils.copyFile(screenFile, new File(System.getProperty("user.dir")+"/failedTestScreens/defectScreen"+testName+".png"));
+		
+	}
 
 }

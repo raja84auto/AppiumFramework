@@ -127,21 +127,6 @@
           <div class="suite-SmokeSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">mobile.AppiumFramework.tests.IosAppTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="uiCatalogTestl">
-                  </a> <!-- uiCatalogTestl -->
-                  <span class="method-name">uiCatalogTestl</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-SmokeSuite-class-passed -->
-          <div class="suite-SmokeSuite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
               <span class="class-name">mobile.AppiumFramework.tests.AndroidAppTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -150,6 +135,21 @@
                   <a name="validateTotal">
                   </a> <!-- validateTotal -->
                   <span class="method-name">validateTotal</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-SmokeSuite-class-passed -->
+          <div class="suite-SmokeSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">mobile.AppiumFramework.tests.IosAppTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="uiCatalogTestl">
+                  </a> <!-- uiCatalogTestl -->
+                  <span class="method-name">uiCatalogTestl</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -164,6 +164,9 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;SmokeSuite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;mobile.AppiumFramework.utils.Listeners&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;mobile.AppiumFramework.tests.AndroidAppTest&quot;/&gt;
@@ -211,16 +214,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'uiCatalogTestl')
 data.setCell(0, 2, 'mobile.AppiumFramework.tests.IosAppTest')
-data.setCell(0, 3, 71190);
+data.setCell(0, 3, 63850);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'validateTotal')
 data.setCell(1, 2, 'mobile.AppiumFramework.tests.AndroidAppTest')
-data.setCell(1, 3, 52380);
+data.setCell(1, 3, 49997);
 window.suiteTableData['SmokeSuite']= { tableData: data, tableDiv: 'times-div-SmokeSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-SmokeSuite">
               </div> <!-- times-div-SmokeSuite -->
             </div> <!-- times-div -->
@@ -248,29 +251,29 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">mobile.AppiumFramework.tests.AndroidAppTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">KillAllNodes</span>
+                <span class="method-name">KillAndroidNodes</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">mobile.AppiumFramework.tests.IosAppTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">KillAllNodes</span>
-                <span class="method-start">4062 ms</span>
+                <span class="method-name">KillNodes</span>
+                <span class="method-start">4033 ms</span>
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">mobile.AppiumFramework.tests.AndroidAppTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">validateTotal</span>
-                <span class="method-start">8106 ms</span>
+                <span class="method-start">8076 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">mobile.AppiumFramework.tests.IosAppTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">uiCatalogTestl</span>
-                <span class="method-start">60500 ms</span>
+                <span class="method-start">58085 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

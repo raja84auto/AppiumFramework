@@ -1,6 +1,12 @@
 package mobile.AppiumFramework.tests;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import org.testng.annotations.Test;
 import io.appium.java_client.android.AndroidDriver;
@@ -22,6 +28,16 @@ public class AndroidAppTest extends Base{
 	public AndroidAppTest() {
 		
 	}
+	
+	
+	@BeforeTest
+	public void KillAllNodes() throws IOException, InterruptedException {
+		// Runtime.getRuntime().exec("taskkill /F /IM node.exe"); // Windows
+		// Runtime.getRuntime().exec("fkill -f :4723");
+		Runtime.getRuntime().exec("sudo kill -2 $(sudo lsof -t -i:4723");
+		Thread.sleep(4000);
+	}
+	
 	
 	@Test
 	public void validateTotal() throws Exception {
@@ -52,6 +68,7 @@ public class AndroidAppTest extends Base{
 		
 		videoRecorder.stopRecord();
 		service.stop(); 
+		//serviceBuilder.build().stop();
 	}
 
 	

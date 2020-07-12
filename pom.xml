@@ -97,12 +97,13 @@
 	    <version>1.7.30</version>
 	    <scope>test</scope>
 	</dependency> 
-	<!-- https://mvnrepository.com/artifact/com.guicedee.services/sl4j -->
-	<!-- <dependency>
-	    <groupId>com.guicedee.services</groupId>
-	    <artifactId>sl4j</artifactId>
-	    <version>1.0.13.1</version>
-	</dependency>  -->
+	<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+	<dependency>
+	    <groupId>org.slf4j</groupId>
+	    <artifactId>slf4j-api</artifactId>
+	    <version>1.7.30</version>
+	</dependency>
+	
 	<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
 	<dependency>
 	    <groupId>org.apache.commons</groupId>

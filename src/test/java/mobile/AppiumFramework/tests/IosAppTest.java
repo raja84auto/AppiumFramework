@@ -1,7 +1,13 @@
 package mobile.AppiumFramework.tests;
 
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+
+import java.io.IOException;
 import java.net.MalformedURLException;
 
 import org.openqa.selenium.Dimension;
@@ -18,11 +24,19 @@ public class IosAppTest extends Base {
 	
 	VideoRecorderUtils videoRecorder = null;
 	
+	@BeforeTest
+	public void KillAllNodes() throws IOException, InterruptedException {
+		// Runtime.getRuntime().exec("taskkill /F /IM node.exe"); // Windows
+		// Runtime.getRuntime().exec("fkill -f :4723");
+		Runtime.getRuntime().exec("sudo kill -2 $(sudo lsof -t -i:4723"); // Mac
+		Thread.sleep(4000);
+	}
 	
 	
 	@Test
 	public void uiCatalogTestl() throws Exception {
 		
+		service = startAppiumServer();
 		videoRecorder.startRecord("IOS App Test - iPhone 8 Simulator");
 		Thread.sleep(5000);
 		
@@ -34,6 +48,7 @@ public class IosAppTest extends Base {
 		Thread.sleep(5000);
 		
 		videoRecorder.stopRecord();
+		service.stop();
 	} 
 	
 

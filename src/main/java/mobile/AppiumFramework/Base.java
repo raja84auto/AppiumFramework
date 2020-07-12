@@ -17,6 +17,8 @@ import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
+import io.appium.java_client.service.local.AppiumServiceBuilder;
+
 
 public class Base {
 
@@ -25,15 +27,27 @@ public class Base {
 	public static AppiumDriverLocalService service = null;
 	boolean serverFlag = false;
 	
+	
 	public AppiumDriverLocalService startAppiumServer() {
 		serverFlag = checkIfServerIsRunnning(4723);
 		if(!serverFlag) {
-			service = AppiumDriverLocalService.buildDefaultService();
+			//service = AppiumDriverLocalService.buildDefaultService();
+			
+			service = AppiumDriverLocalService.buildService(new AppiumServiceBuilder().withAppiumJS(new File("/usr/local/lib/node_modules/appium/build/lib/main.js")));
+					
+//			service = AppiumDriverLocalService
+//					.buildService(new AppiumServiceBuilder()
+//							.usingDriverExecutable(new File("/usr/local/bin/node"))
+//							.withAppiumJS(new File(“/usr/local/lib/node_modules/appium/build/lib/main.js”))
+//							.withIPAddress(“127.0.0.1”).usingPort(4723));
 			service.start();
 		}
 		
 		return service;
+		
 	}
+	
+	
 	
 	public static boolean checkIfServerIsRunnning(int port) {
 
@@ -51,7 +65,17 @@ public class Base {
 	    return isServerRunning;
 	}
 	
-	public static AndroidDriver<AndroidElement> capabilities(String appName) throws IOException {
+	
+	public static void startEmulator() throws IOException, InterruptedException {
+		
+		// /Users/rajamac/eclipse-workspace/AppiumFramework/src/main/java/resources/startEmulator.command
+		Runtime.getRuntime().exec(System.getProperty("user.dir")+"/src/main/java/resources/startEmulator.command");
+		Thread.sleep(6000);
+		System.out.println("Andoid Emulator has been started");
+	}
+	
+	
+	public static AndroidDriver<AndroidElement> capabilities(String appName) throws IOException, InterruptedException {
 		
 		Properties props = new Properties();
 		// /Users/rajamac/eclipse-workspace/AppiumFramework/src/main/java/Properties/global.properties
@@ -60,7 +84,12 @@ public class Base {
 		String getApp = (String) props.get(appName);
 		String getDevice = (String) props.getProperty("androidEmulator");
 		
-		File appDir = new File("apk");
+		if(getDevice.contains("AVD")) {
+			startEmulator();
+			
+		}
+		
+		File appDir = new File("srcApk");
 		File apkFile = new File(appDir, getApp);
 		
 		DesiredCapabilities caps = new DesiredCapabilities();		
@@ -69,7 +98,8 @@ public class Base {
 		caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
 		caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 60);
 		caps.setCapability(MobileCapabilityType.APP, apkFile.getAbsolutePath());
-		driver = new AndroidDriver<>(new URL("http://0.0.0.0:4723/wd/hub"), caps);		
+		driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), caps); // debug
+		
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 					
 		
